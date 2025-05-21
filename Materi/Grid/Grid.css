@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #230047;
+  background-color: #118a5a;
   color: white;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .game-card {
-  background-color: #3a015c;
+  background-color: #14d88a;
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
