@@ -1,72 +1,173 @@
+/* == IMPORT FONT CUSTOM KALIAN DISINI == */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Lexend+Zetta:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #1de01a;
+  --color-muted: #1e7e00;
+}
+
 body {
+  gap: 50px;
+  display: grid;
+  place-items: center;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #118a5a;
-  color: #222; /* warna teks utama */
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  padding: 0 32px;
+  background: #f1f5fb;
+  color: #1de01a;
+  font-family: "Montserrat", sans-serif;
 }
 
-.login-box {
-  background-color: #14d88a;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  width: 100%;
-  max-width: 480px;
+.background {
+  position: fixed;
+  inset: 0;
+}
+
+.background::before,
+.background::after {
+  content: "";
+  position: inherit;
+  border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+  width: 100vmin;
+  height: 100vmin;
+  animation: move 10s alternate infinite linear;
+}
+
+.background::before {
+  top: -40vmin;
+  left: -50vmin;
+  background: #1eff00;
+}
+
+.background::after {
+  right: -50vmin;
+  bottom: -50vmin;
+  background: #00eeff;
+  animation-direction: alternate-reverse;
+}
+/****/
+.card {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  width: 60vw;
+  margin: 0 20px;
+  padding: 54px 30px;
+  border-radius: 24px;
+  background: rgb(255 255 255 / 100%);
+  backdrop-filter: blur(100px);
   text-align: center;
+  box-shadow: 0 100px 100px rgba(0, 0, 0, 0.1);
 }
 
-.login-box h2 {
-  margin-bottom: 30px;
-  font-size: 24px;
-  color: #222;
+.card .logo {
+  position: absolute;
+  top: 0;
+  left: -10%;
+  padding: 30px;
+  background: #464646;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 150%;
+  width: 124;
+  height: 124px;
+  margin-bottom: 20px;
+}
+.card > h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 116px 0 4px;
 }
 
-.login-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background-color: #f3f3f3;
-  color: #4b3df3;
-  border: none;
-  border-radius: 999px;
-  padding: 14px;
-  margin-bottom: 16px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  width: 100%;
-}
-
-.login-button img {
-  width: 20px;
-  height: 20px;
-}
-
-.login-button:hover {
-  background-color: #e0e0e0;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 30px 0 20px;
-}
-
-.signup-text {
+.card > h3 {
   font-size: 14px;
-  color: #0077ff;
+  font-weight: 500;
+  margin: 0 0 44px;
+  color: var(--color-muted);
 }
 
-.signup-text a {
-  color: #4b3df3;
-  text-decoration: none;
-  font-weight: bold;
+.form {
+  margin: 0 0 32px;
+  display: grid;
+  gap: 12px;
+}
+
+.form :is(input, button) {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.textbox {
+  position: relative;
+}
+
+.textbox > input {
+  border: 0;
+  padding: 0 35px 0px;
+  color: inherit;
+  background: rgb(0 0 0 / 4%);
+}
+
+.textbox > input::placeholder {
+  color: var(--color-muted);
+}
+
+.textbox > span {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  translate: 0 -50%;
+  pointer-events: none;
+  color: var(--color-muted);
+}
+
+.form > button {
+  border: 0;
+  color: #000000;
+  background: var(--color-primary);
+  display: grid;
+  place-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.card > footer {
+  color: var(--color-primary);
+}
+
+.card > a {
+  display: block;
+  max-resolution: 0 0 56px;
+}
+
+.card a {
+  font-weight: 500;
+  color: #00b3ff;
+}
+
+/** TAMBAHKAN MEDIA QUERY UNTUK RESPONSIVE **/
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translateY(-120px);
+  }
+}
+
+@media (width >= 680px) {
+  .card {
+    margin: 0;
+    width: 60vw;
+    max-width: 420px;
+  }
 }
