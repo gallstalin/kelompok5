@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar</title>
+    <title>tentang</title>
     <link rel="stylesheet" href="../Nav/Nav.css" />
+    <link rel="stylesheet" href="../Nav/menu.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,31 +19,27 @@
 
     <!-- Bagian NAV-BAR -->
 
-    <nav class="navbar">
-      <img class="navbar-logo" src="../Assets/x1.png" />
-      <div class="topup-banner">
-        <img src="../Assets/Picture/sampul.PNG" alt="">
-
+<!-- XION BUTTON -->
+<button class="XION" onclick="openSidebar()">☰</button>
+<!-- SIDEBAR -->
+<div id="mySidebar" class="sidebar">
+  <a href="../home/home.html" class="active"
+    ><span class="icon">🏠</span> Beranda</a
+  >
+  <a href="../Grid/Example-Grid.html"><span class="icon">🎮</span> Game</a>
+  <a href="../Authentication-Form/Sign-up.html"><span class="icon">🤝</span>Daftar</a>
+  <a href="../Nav/Example-Nav.html"><span class="icon">🔎</span> Tentang kami</a>
+</div>
+<div id="overlay" class="overlay" onclick="closeSidebar()"></div>
       
-    </nav>
-    <button class="navbar-menu" onclick="toggleMenu()"></button>
-    <nav class="menu">
-      <a href="../Nav/Example-Nav.html" style="animation-delay: 0.1s">Home</a>
-      <a href="../troli/troli.html" style="animation-delay: 0.2s">troli</a>
-      <a href="#" style="animation-delay: 0.3s">Services</a>
-      <a href="#" style="animation-delay: 0.4s">Timeline</a>
-      <a
-        href="../Authentication-Form/Sign-up.html"
-        style="animation-delay: 0.5s"
-        >Sign up</a>
-    </nav>
+    
 
     <!-- Bagian Isi Content - SECTION -->
 
     <section class="first">
       <div class="description">
         <h1 class="title">
-          <span class="text-gradient">Welcome</span>
+          <span class="text-gradient">Welcome To XION Top-up</span>
         </h1>
       </div>
       <div class="svg-pict">
@@ -214,10 +211,6 @@
     <section></section>
 
     <!--BATAS FOOTER-->
-    <script>
-      const toggleMenu = () => {
-        document.body.classList.toggle("open");
-      };
-    </script>
+    <script src="../Nav/menu.js"></script>
   </body>
 </html>

@@ -60,3 +60,40 @@ body {
 .show-all:hover {
   text-decoration: underline;
 }
+/* === GAME GRID LINK STYLE === */
+.game-card a {
+  text-decoration: none; /* Hilangkan garis bawah */
+  color: white; /* Warna teks putih */
+  font-weight: bold; /* Opsional: biar lebih menonjol */
+  transition: color 0.3s ease;
+}
+
+.game-card a:hover {
+  color: #00ff95; /* Warna saat hover */
+}
+
+/* === GAME CARD STYLING & IMAGE FIX === */
+.game-card {
+  background-color: #222; /* Background kontras */
+  border-radius: 8px;
+  overflow: hidden; /* Supaya gambar tidak keluar batas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+
+  /* Efek neon glow */
+  box-shadow: 0 0 8px #00ffd5, 0 0 15px #00ffd5, 0 0 20px #00ffd5,
+    0 0 40px #00ffd5;
+}
+
+/* Neon glow untuk teks saat hover */
+.game-card:hover p,
+.game-card:hover a {
+  color: #00ffd5;
+  text-shadow: 0 0 5px #00ffd5, 0 0 10px #00ffd5, 0 0 15px #00ffd5,
+    0 0 20px #00ffd5;
+}

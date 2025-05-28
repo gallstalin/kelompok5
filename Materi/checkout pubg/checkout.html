@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Up PUBG Mobile</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <h1>Top Up PUBG Mobile</h1>
+      <form class="checkout-form">
+        <!-- Informasi Akun -->
+        <div class="form-section">
+          <h2>Informasi Akun</h2>
+          <label>ID Pemain</label>
+          <input
+            type="text"
+            name="user_id"
+            placeholder="Masukkan ID PUBG"
+            required
+          />
+
+          <label>Server (opsional)</label>
+          <input type="text" name="server" placeholder="Contoh: Asia, Eropa" />
+        </div>
+
+        <!-- Pilih UC -->
+        <div class="form-section">
+          <h2>Pilih Jumlah UC</h2>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="uc"
+                class="uc-option"
+                data-price="12000"
+                value="60"
+                checked
+              />
+              60 UC - Rp12.000
+            </label>
+          </div>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="uc"
+                class="uc-option"
+                data-price="29000"
+                value="180"
+              />
+              180 UC - Rp29.000
+            </label>
+          </div>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="uc"
+                class="uc-option"
+                data-price="47000"
+                value="325"
+              />
+              325 UC - Rp47.000
+            </label>
+          </div>
+        </div>
+
+        <!-- Metode Pembayaran -->
+        <div class="form-section">
+          <h2>Metode Pembayaran</h2>
+          <select name="pembayaran" required>
+            <option value="">Pilih Metode Pembayaran</option>
+            <option value="dana">DANA</option>
+            <option value="ovo">OVO</option>
+            <option value="gopay">GoPay</option>
+            <option value="qris">QRIS</option>
+          </select>
+        </div>
+
+        <!-- Ringkasan -->
+        <div class="order-summary">
+          <h2>Ringkasan Pembelian</h2>
+          <p>UC: <span id="jumlahUC">60</span></p>
+          <p class="total">Total: <span id="totalHarga">Rp12.000</span></p>
+        </div>
+
+        <button type="submit" class="checkout-button">Bayar Sekarang</button>
+      </form>
+    </div>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

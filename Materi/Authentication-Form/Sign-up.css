@@ -1,115 +1,72 @@
 body {
-  font-family: "Lexend Exa", sans-serif;
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  padding: 0 30px;
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #118a5a;
+  color: #222; /* warna teks utama */
 }
 
-* {
-  box-sizing: border-box;
-}
-button,
-input {
-  border: 0;
-  width: 100%;
-  height: 60px;
-  background: transparent;
-  font-family: inherit;
-  font-size: 16px;
-  outline: none;
-}
-
-.sign-up {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  max-width: 460px;
+.container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 0 40px;
-  background: rgb(120, 255, 136);
-  backdrop-filter: blur(50px);
-}
-/** KEYFRAME UNTUK ANIMASI BACKGROUND 3D **/
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
-  }
-}
-
-.background {
-  position: fixed;
-  width: 100vw;
+  align-items: center;
   height: 100vh;
-  top: 0;
-  left: 0;
-  background: #444444;
-  overflow: hidden;
 }
 
-.background span {
-  width: 38vmin;
-  height: 38vmin;
-  border-radius: 38vmin;
-  backface-visibility: hidden;
-  position: absolute;
-  animation: move;
-  animation-duration: 105;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+.login-box {
+  background-color: #14d88a;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
 }
 
-.background span:nth-child(0) {
-  color: #70fd77;
-  top: 57%;
-  left: 23%;
-  animation-duration: 10s;
-  animation-delay: -31s;
-  transform-origin: -20vw -15vh;
-  box-shadow: -76vmin 0 10.414138892314494vmin currentColor;
+.login-box h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #222;
 }
 
-.background span:nth-child(1) {
-  color: #00ddff;
-  top: 51%;
-  left: 66%;
-  animation-duration: 28s;
-  animation-delay: -32s;
-  transform-origin: -13vw -12vh;
-  box-shadow: 76vmin 0 10.421136806952989vmin currentColor;
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #f3f3f3;
+  color: #4b3df3;
+  border: none;
+  border-radius: 999px;
+  padding: 14px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
 }
 
-.background span:nth-child(3) {
-  color: #00ff1e;
-  top: 76%;
-  left: 40%;
-  animation-duration: 13s;
-  animation-delay: -32s;
-  transform-origin: -17vw -1vh;
-  box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
-}
-.background span:nth-child(4) {
-  color: #00ddff;
-  top: 92%;
-  left: 66%;
-  animation-duration: 45s;
-  animation-delay: -28s;
-  transform-origin: -15vw -14vh;
-  box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+.login-button img {
+  width: 20px;
+  height: 20px;
 }
 
-.background span:nth-child(5) {
-  color: #00ff1e;
-  top: 95%;
-  left: 45%;
-  animation-duration: 24s;
-  animation-delay: -19s;
-  transform-origin: -9vw -15vh;
-  box-shadow: 76vmin 0 9.76941503334886vmin currentColor;
+.login-button:hover {
+  background-color: #e0e0e0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0 20px;
+}
+
+.signup-text {
+  font-size: 14px;
+  color: #0077ff;
+}
+
+.signup-text a {
+  color: #4b3df3;
+  text-decoration: none;
+  font-weight: bold;
 }

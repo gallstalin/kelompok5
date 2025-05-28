@@ -1,0 +1,134 @@
+/* home.css */
+
+/* === GENERAL === */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* === SLIDER STYLING === */
+.slider-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* === SLIDER NAVIGATION === */
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.navigation button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.navigation button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* === DOTS === */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots span {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.dots .active {
+  background-color: #717171;
+}
+
+/* === GAME GRID LINK STYLE === */
+.game-card a {
+  text-decoration: none; /* Hilangkan garis bawah */
+  color: white; /* Warna teks putih */
+  font-weight: bold; /* Opsional: biar lebih menonjol */
+  transition: color 0.3s ease;
+}
+
+.game-card a:hover {
+  color: #00ff95; /* Warna saat hover */
+}
+
+/* === GAME CARD STYLING & IMAGE FIX === */
+.game-card {
+  background-color: #222; /* Background kontras */
+  border-radius: 8px;
+  overflow: hidden; /* Supaya gambar tidak keluar batas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+
+  /* Efek neon glow */
+  box-shadow: 0 0 8px #00ffd5, 0 0 15px #00ffd5, 0 0 20px #00ffd5,
+    0 0 40px #00ffd5;
+}
+
+/* Neon glow untuk teks saat hover */
+.game-card:hover p,
+.game-card:hover a {
+  color: #00ffd5;
+  text-shadow: 0 0 5px #00ffd5, 0 0 10px #00ffd5, 0 0 15px #00ffd5,
+    0 0 20px #00ffd5;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}

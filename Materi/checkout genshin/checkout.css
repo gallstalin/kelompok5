@@ -1,0 +1,115 @@
+/* Animasi background gradient pelangi */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    270deg,
+    rgb(0, 247, 255),
+    rgb(0, 0, 0),
+    rgb(0, 247, 255),
+    rgb(0, 0, 0),
+    rgb(0, 247, 255),
+    rgb(0, 0, 0),
+    rgb(0, 247, 255),
+    rgb(0, 0, 0),
+    rgb(0, 247, 255),
+    rgb(0, 0, 0),
+    rgb(0, 247, 255)
+  );
+  background-size: 300% 300%;
+  animation: slideBackground 20s linear infinite;
+}
+
+/* Keyframe animasi background */
+@keyframes slideBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container checkout Genshin Impact */
+.checkout-container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff; /* Tetap putih */
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.order-summary {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f3f5;
+  border-radius: 5px;
+}
+
+.order-summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.order-summary .total {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.checkout-button {
+  background-color: #28a745;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkout-button:hover {
+  background-color: #218838;
+}
