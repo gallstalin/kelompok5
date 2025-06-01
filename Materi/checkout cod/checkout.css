@@ -1,56 +1,33 @@
-/* Animasi background gradient pelangi */
+/* Background abu-abu sedang */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    270deg,
-    rgb(0, 247, 255),
-    rgb(0, 0, 0),
-    rgb(0, 247, 255),
-    rgb(0, 0, 0),
-    rgb(0, 247, 255),
-    rgb(0, 0, 0),
-    rgb(0, 247, 255),
-    rgb(0, 0, 0),
-    rgb(0, 247, 255),
-    rgb(0, 0, 0),
-    rgb(0, 247, 255)
-  );
-  background-size: 300% 300%;
-  animation: slideBackground 20s linear infinite;
+  background-color: #343434; /* Warna abu sedang */
 }
 
-/* Keyframe animasi background */
-@keyframes slideBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Container checkout */
+/* Kotak checkout putih dengan glow pink */
 .checkout-container {
   max-width: 600px;
   margin: 30px auto;
-  background: #fff; /* Putih */
+  background: #fff; /* Tetap putih */
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
+
+  /* Efek glow pink RGB di sisi */
+  box-shadow: 0 0 15px rgb(255, 0, 128), 0 0 30px rgb(255, 255, 255),
+    0 0 60px rgb(255, 0, 242);
 }
 
+/* Judul */
 h1,
 h2 {
   color: #333;
 }
 
+/* Form checkout */
 .checkout-form {
   display: flex;
   flex-direction: column;
@@ -81,6 +58,7 @@ textarea {
   height: 80px;
 }
 
+/* Ringkasan pesanan */
 .order-summary {
   margin-top: 20px;
   padding: 15px;
@@ -99,6 +77,7 @@ textarea {
   font-size: 1.2em;
 }
 
+/* Tombol checkout */
 .checkout-button {
   background-color: #28a745;
   color: white;

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #118a5a;
+  background-color: #343434;
   color: #222; /* warna teks utama */
 }
 
@@ -13,7 +13,7 @@ body {
 }
 
 .login-box {
-  background-color: #14d88a;
+  background-color: #a1a1a1;
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -34,7 +34,7 @@ body {
   justify-content: center;
   gap: 12px;
   background-color: #f3f3f3;
-  color: #4b3df3;
+  color: #c200bb;
   border: none;
   border-radius: 999px;
   padding: 14px;
@@ -51,22 +51,22 @@ body {
 }
 
 .login-button:hover {
-  background-color: #e0e0e0;
+  background-color: #ff9af3;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #000000;
   margin: 30px 0 20px;
 }
 
 .signup-text {
   font-size: 14px;
-  color: #0077ff;
+  color: #a3009e;
 }
 
 .signup-text a {
-  color: #4b3df3;
+  color: #0066ff;
   text-decoration: none;
   font-weight: bold;
 }

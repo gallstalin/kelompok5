@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-color: #14d88a;
+  background-color: #343434;
 }
 
 /* Sidebar Styles */
@@ -28,20 +28,20 @@ body {
 }
 
 .sidebar a:hover {
-  background-color: #43ffa7;
+  background-color: #ff1ddd;
   color: #fff;
 }
 
 .sidebar a.active {
-  background-color: #027f6e;
+  background-color: #6b1255;
 }
 
 .sidebar .icon {
   margin-right: 10px;
 }
 
-/* Hamburger Button */
-.hamburger {
+/*  Xion Button */
+.Xion {
   font-size: 30px;
   cursor: pointer;
   padding: 15px;
@@ -51,7 +51,7 @@ body {
   top: 10px;
   left: 10px;
   z-index: 1100;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 /* Overlay */

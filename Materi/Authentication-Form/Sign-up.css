@@ -1,4 +1,3 @@
-/* == IMPORT FONT CUSTOM KALIAN DISINI == */
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Lexend+Zetta:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
@@ -6,19 +5,19 @@
 }
 
 :root {
-  --color-primary: #1de01a;
-  --color-muted: #1e7e00;
+  --color-primary: #464646;
+  --color-muted: #950a7c;
 }
 
 body {
-  gap: 50px;
   display: grid;
   place-items: center;
+  gap: 50px;
   margin: 0;
   height: 100vh;
   padding: 0 32px;
   background: #f1f5fb;
-  color: #1de01a;
+  color: #555555;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -40,55 +39,70 @@ body {
 .background::before {
   top: -40vmin;
   left: -50vmin;
-  background: #1eff00;
+  background: #ff00e1;
 }
 
 .background::after {
   right: -50vmin;
   bottom: -50vmin;
-  background: #00eeff;
+  background: #9f9f9f;
   animation-direction: alternate-reverse;
 }
-/****/
+
+/**** CARD STYLE ****/
 .card {
-  overflow: hidden;
   position: relative;
+  overflow: visible;
   z-index: 3;
   width: 60vw;
-  margin: 0 20px;
-  padding: 54px 30px;
+  max-width: 420px;
+  padding: 100px 30px 30px;
   border-radius: 24px;
   background: rgb(255 255 255 / 100%);
   backdrop-filter: blur(100px);
   text-align: center;
-  box-shadow: 0 100px 100px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(255, 0, 200, 0.45);
 }
 
-.card .logo {
+/**** LOGO BULAT TENGAH ****/
+.logo-container {
   position: absolute;
-  top: 0;
-  left: -10%;
-  padding: 30px;
-  background: #464646;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 150%;
-  width: 124;
-  height: 124px;
-  margin-bottom: 20px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: rgb(65, 65, 65);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
+
+.logo-container .logo {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/**** JUDUL & SUBJUDUL ****/
 .card > h2 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
-  margin: 116px 0 4px;
+  margin: 0 0 6px;
 }
 
 .card > h3 {
   font-size: 14px;
   font-weight: 500;
-  margin: 0 0 44px;
+  margin: 0 0 36px;
   color: var(--color-muted);
 }
 
+/**** FORM STYLING ****/
 .form {
   margin: 0 0 32px;
   display: grid;
@@ -102,6 +116,7 @@ body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
+
 .textbox {
   position: relative;
 }
@@ -110,7 +125,7 @@ body {
   border: 0;
   padding: 0 35px 0px;
   color: inherit;
-  background: rgb(0 0 0 / 4%);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 .textbox > input::placeholder {
@@ -121,14 +136,14 @@ body {
   position: absolute;
   top: 50%;
   left: 10px;
-  translate: 0 -50%;
+  transform: translateY(-50%);
   pointer-events: none;
   color: var(--color-muted);
 }
 
 .form > button {
   border: 0;
-  color: #000000;
+  color: #b9b9b9;
   background: var(--color-primary);
   display: grid;
   place-items: center;
@@ -136,38 +151,45 @@ body {
   cursor: pointer;
 }
 
+.card > a {
+  display: block;
+  margin-top: 16px;
+  font-weight: 500;
+  color: #00b3ff;
+  text-decoration: none;
+}
+
 .card > footer {
   color: var(--color-primary);
 }
 
-.card > a {
-  display: block;
-  max-resolution: 0 0 56px;
+/**** LINK DI FOOTER BIRU (TIDAK UNGU SAAT DIKLIK) ****/
+.card footer a {
+  color: #00b3ff;
+  text-decoration: none;
 }
 
-.card a {
-  font-weight: 500;
+.card footer a:visited {
   color: #00b3ff;
 }
 
-/** TAMBAHKAN MEDIA QUERY UNTUK RESPONSIVE **/
-
+/**** RESPONSIVE DESIGN ****/
 @media (width >= 500px) {
   body {
     padding: 0;
   }
 }
 
-@keyframes move {
-  100% {
-    transform: translateY(-120px);
+@media (width >= 680px) {
+  .card {
+    width: 60vw;
+    max-width: 420px;
   }
 }
 
-@media (width >= 680px) {
-  .card {
-    margin: 0;
-    width: 60vw;
-    max-width: 420px;
+/**** BACKGROUND ANIMATION ****/
+@keyframes move {
+  100% {
+    transform: translateY(-120px);
   }
 }

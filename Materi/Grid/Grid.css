@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #118a5a;
+  background-color: #000000;
   color: white;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 .game-card {
-  background-color: #14d88a;
+  background-color: #000000;
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
@@ -69,7 +69,7 @@ body {
 }
 
 .game-card a:hover {
-  color: #00ff95; /* Warna saat hover */
+  color: #000000; /* Warna saat hover */
 }
 
 /* === GAME CARD STYLING & IMAGE FIX === */
@@ -86,14 +86,14 @@ body {
   transform: scale(1.05);
 
   /* Efek neon glow */
-  box-shadow: 0 0 8px #00ffd5, 0 0 15px #00ffd5, 0 0 20px #00ffd5,
-    0 0 40px #00ffd5;
+  box-shadow: 0 0 8px #ffffff, 0 0 15px #ffffff, 0 0 20px #ff00d9,
+    0 0 40px #ff00d9;
 }
 
 /* Neon glow untuk teks saat hover */
 .game-card:hover p,
 .game-card:hover a {
-  color: #00ffd5;
-  text-shadow: 0 0 5px #00ffd5, 0 0 10px #00ffd5, 0 0 15px #00ffd5,
-    0 0 20px #00ffd5;
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ff00d9,
+    0 0 20px #ff00d9;
 }
