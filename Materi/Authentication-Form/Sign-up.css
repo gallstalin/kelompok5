@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Lexend+Zetta:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #464646;
+  --color-muted: #950a7c;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  margin: 0;
+  height: 100vh;
+  padding: 0 32px;
+  background: #f1f5fb;
+  color: #555555;
+  font-family: "Montserrat", sans-serif;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+}
+
+.background::before,
+.background::after {
+  content: "";
+  position: inherit;
+  border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+  width: 100vmin;
+  height: 100vmin;
+  animation: move 10s alternate infinite linear;
+}
+
+.background::before {
+  top: -40vmin;
+  left: -50vmin;
+  background: #ff00e1;
+}
+
+.background::after {
+  right: -50vmin;
+  bottom: -50vmin;
+  background: #9f9f9f;
+  animation-direction: alternate-reverse;
+}
+
+/**** CARD STYLE ****/
+.card {
+  position: relative;
+  overflow: visible;
+  z-index: 3;
+  width: 60vw;
+  max-width: 420px;
+  padding: 100px 30px 30px;
+  border-radius: 24px;
+  background: rgb(255 255 255 / 100%);
+  backdrop-filter: blur(100px);
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(255, 0, 200, 0.45);
+}
+
+/**** LOGO BULAT TENGAH ****/
+.logo-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: rgb(65, 65, 65);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.logo-container .logo {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/**** JUDUL & SUBJUDUL ****/
+.card > h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.card > h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 36px;
+  color: var(--color-muted);
+}
+
+/**** FORM STYLING ****/
+.form {
+  margin: 0 0 32px;
+  display: grid;
+  gap: 12px;
+}
+
+.form :is(input, button) {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.textbox {
+  position: relative;
+}
+
+.textbox > input {
+  border: 0;
+  padding: 0 35px 0px;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.textbox > input::placeholder {
+  color: var(--color-muted);
+}
+
+.textbox > span {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-muted);
+}
+
+.form > button {
+  border: 0;
+  color: #b9b9b9;
+  background: var(--color-primary);
+  display: grid;
+  place-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.card > a {
+  display: block;
+  margin-top: 16px;
+  font-weight: 500;
+  color: #00b3ff;
+  text-decoration: none;
+}
+
+.card > footer {
+  color: var(--color-primary);
+}
+
+/**** LINK DI FOOTER BIRU (TIDAK UNGU SAAT DIKLIK) ****/
+.card footer a {
+  color: #00b3ff;
+  text-decoration: none;
+}
+
+.card footer a:visited {
+  color: #00b3ff;
+}
+
+/**** RESPONSIVE DESIGN ****/
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
+
+@media (width >= 680px) {
+  .card {
+    width: 60vw;
+    max-width: 420px;
+  }
+}
+
+/**** BACKGROUND ANIMATION ****/
+@keyframes move {
+  100% {
+    transform: translateY(-120px);
+  }
+}

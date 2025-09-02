@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Up Blood Strike</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <h1>Top Up Blood Strike</h1>
+      <form class="checkout-form">
+        <!-- Informasi Akun -->
+        <div class="form-section">
+          <h2>Masukkan ID Akun</h2>
+          <label>ID Akun</label>
+          <input
+            type="text"
+            name="user_id"
+            placeholder="Masukkan ID Blood Strike Anda"
+            required
+          />
+
+          <label>Server</label>
+          <input
+            type="text"
+            name="server"
+            placeholder="Contoh: Asia, Europe, US"
+            required
+          />
+        </div>
+
+        <!-- Pilih Blood Strike Points -->
+        <div class="form-section">
+          <h2>Pilih Blood Strike Points</h2>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="bsp"
+                class="bsp-option"
+                data-price="16000"
+                value="100"
+                checked
+              />
+              100 Blood Strike Points - Rp16.000
+            </label>
+          </div>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="bsp"
+                class="bsp-option"
+                data-price="42000"
+                value="310"
+              />
+              310 Blood Strike Points - Rp42.000
+            </label>
+          </div>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="bsp"
+                class="bsp-option"
+                data-price="75000"
+                value="520"
+              />
+              520 Blood Strike Points - Rp75.000
+            </label>
+          </div>
+        </div>
+
+        <!-- Metode Pembayaran -->
+        <div class="form-section">
+          <h2>Metode Pembayaran</h2>
+          <select name="pembayaran" required>
+            <option value="">Pilih Metode Pembayaran</option>
+            <option value="dana">DANA</option>
+            <option value="ovo">OVO</option>
+            <option value="gopay">GoPay</option>
+            <option value="qris">QRIS</option>
+          </select>
+        </div>
+
+        <!-- Ringkasan Pembayaran -->
+        <div class="order-summary">
+          <h2>Ringkasan Pembayaran</h2>
+          <p>Blood Strike Points: <span id="jumlahBSP">100</span></p>
+          <p class="total">Total: <span id="totalHarga">Rp16.000</span></p>
+        </div>
+
+        <button type="submit" class="checkout-button">Bayar Sekarang</button>
+      </form>
+    </div>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

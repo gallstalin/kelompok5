@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #343434;
+  color: #222; /* warna teks utama */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #a1a1a1;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #222;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #f3f3f3;
+  color: #c200bb;
+  border: none;
+  border-radius: 999px;
+  padding: 14px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.login-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.login-button:hover {
+  background-color: #ff9af3;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #000000;
+  margin: 30px 0 20px;
+}
+
+.signup-text {
+  font-size: 14px;
+  color: #a3009e;
+}
+
+.signup-text a {
+  color: #0066ff;
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Up Mobile Legends</title>
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <h1>Top Up Mobile Legends</h1>
+      <form class="checkout-form">
+        <!-- Informasi Akun -->
+        <div class="form-section">
+          <h2>Informasi Akun</h2>
+          <label>ID Pengguna</label>
+          <input
+            type="text"
+            name="user_id"
+            placeholder="Masukkan ID"
+            required
+          />
+
+          <label>Zone ID</label>
+          <input
+            type="text"
+            name="zone_id"
+            placeholder="Masukkan Zone ID"
+            required
+          />
+        </div>
+
+        <!-- Pilih Diamond -->
+        <div class="form-section">
+          <h2>Pilih Jumlah Diamond</h2>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="diamond"
+                class="diamond-option"
+                data-price="15000"
+                value="100"
+                checked
+              />
+              100 Diamond - Rp15.000
+            </label>
+          </div>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="diamond"
+                class="diamond-option"
+                data-price="40000"
+                value="300"
+              />
+              300 Diamond - Rp40.000
+            </label>
+          </div>
+
+          <div class="item">
+            <label>
+              <input
+                type="radio"
+                name="diamond"
+                class="diamond-option"
+                data-price="70000"
+                value="500"
+              />
+              500 Diamond - Rp70.000
+            </label>
+          </div>
+        </div>
+
+        <!-- Metode Pembayaran -->
+        <div class="form-section">
+          <h2>Metode Pembayaran</h2>
+          <select name="pembayaran" required>
+            <option value="">Pilih Metode</option>
+            <option value="dana">DANA</option>
+            <option value="ovo">OVO</option>
+            <option value="gopay">GoPay</option>
+            <option value="qris">QRIS</option>
+          </select>
+        </div>
+
+        <!-- Ringkasan -->
+        <div class="order-summary">
+          <h2>Ringkasan Pembelian</h2>
+          <p>Diamond: <span id="jumlahDiamond">100</span></p>
+          <p class="total">Total: <span id="totalHarga">Rp15.000</span></p>
+        </div>
+
+        <button type="submit" class="checkout-button">Bayar Sekarang</button>
+      </form>
+    </div>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>
